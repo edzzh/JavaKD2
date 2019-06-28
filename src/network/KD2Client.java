@@ -30,7 +30,8 @@ public class KD2Client {
         
         registerPackets();
         
-        client.start();
+        new Thread(client).start();
+        
         client.connect(8080, ipAdress, port);
     }
     

@@ -73,6 +73,7 @@ public class KD2Server {
     
     public static void getAndSendStudents(Connection c) {
         ArrayList<Student> tmpStudentList = ActionsDB.selectAllStudentsSQL();
+        System.out.println(c.getID());
         server.sendToTCP(c.getID(), tmpStudentList);
     }
 }
